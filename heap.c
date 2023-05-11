@@ -51,19 +51,19 @@ void heap_pop(Heap* pq){
 
   int i = 0;
   while (2*i + 1 < pq->size) {
-    int left_child = 2*i + 1;
-    int right_child = 2*i + 2;
-    int largest_child = left_child;
+    int left = 2*i + 1;
+    int right = 2*i + 2;
+    int max = left;
 
-    if (right_child < pq->size && pq->heapArray[right_child].priority > pq->heapArray[left_child].priority) {
-      largest_child = right_child;
+    if (right < pq->size && pq->heapArray[right].priority > pq->heapArray[left].priority) {
+      max = right;
     }
 
-    if (pq->heapArray[largest_child].priority > pq->heapArray[i].priority) {
-      heapElem temp = pq->heapArray[largest_child];
-      pq->heapArray[largest_child] = pq->heapArray[i];
+    if (pq->heapArray[max].priority > pq->heapArray[i].priority) {
+      heapElem temp = pq->heapArray[max];
+      pq->heapArray[max] = pq->heapArray[i];
       pq->heapArray[i] = temp;
-      i = largest_child;
+      i = max;
     } else {
       break;
     }
