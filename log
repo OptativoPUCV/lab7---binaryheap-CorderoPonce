@@ -148,3 +148,17 @@ heap.c:33:1: error: expected expression before ‘}’ token
       | ^
 Compilation failed
 24eb51d
+Thu 11 May 2023 05:03:28 PM UTC: 
+ heap.c | 6 +++++-
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+In file included from test.c:4:
+heap.c: In function ‘heap_push’:
+heap.c:34:21: error: incompatible types when initializing type ‘heapElem *’ {aka ‘struct nodo *’} using type ‘heapElem’ {aka ‘struct nodo’}
+   34 |     heapElem *aux = pq->heapArray[(i-1)/2];
+      |                     ^~
+heap.c:34:15: error: unused variable ‘aux’ [-Werror=unused-variable]
+   34 |     heapElem *aux = pq->heapArray[(i-1)/2];
+      |               ^~~
+cc1: all warnings being treated as errors
+Compilation failed
+49f0ca3
