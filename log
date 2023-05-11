@@ -167,3 +167,14 @@ Thu 11 May 2023 05:09:46 PM UTC:
  1 file changed, 4 insertions(+), 1 deletion(-)
  tests:  0|0
 752e3e2
+Thu 11 May 2023 05:15:21 PM UTC: 
+ heap.c | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+In file included from test.c:4:
+heap.c: In function ‘heap_top’:
+heap.c:22:28: error: returning ‘int’ from a function with return type ‘void *’ makes pointer from integer without a cast [-Werror=int-conversion]
+   22 |     return pq->heapArray[0].priority;
+      |            ~~~~~~~~~~~~~~~~^~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+0815fb9
