@@ -60,3 +60,13 @@ Thu 11 May 2023 04:42:42 PM UTC:
  tests:  0|4
 total_score: 0/70
 71aad78
+Thu 11 May 2023 04:43:04 PM UTC: 
+ heap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:4:
+heap.c: In function ‘createHeap’:
+heap.c:36:3: error: conversion to non-scalar type requested
+   36 |   Heap *h = (Heap) malloc (sizeof(Heap));
+      |   ^~~~
+Compilation failed
+c1792e3
