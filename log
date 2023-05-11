@@ -178,3 +178,17 @@ heap.c:22:28: error: returning ‘int’ from a function with return type ‘voi
 cc1: all warnings being treated as errors
 Compilation failed
 0815fb9
+Thu 11 May 2023 05:15:33 PM UTC: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+heap.c: In function ‘heap_top’:
+heap.c:22:25: error: incompatible types when returning type ‘heapElem’ {aka ‘struct nodo’} but ‘void *’ was expected
+   22 |     return pq->heapArray[0];
+      |            ~~~~~~~~~~~~~^~~
+heap.c:23:1: error: control reaches end of non-void function [-Werror=return-type]
+   23 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+9bb93cc
