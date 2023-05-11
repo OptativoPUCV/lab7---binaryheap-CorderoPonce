@@ -112,3 +112,14 @@ heap.c:23:12: error: returning ‘int’ from a function with return type ‘voi
 cc1: all warnings being treated as errors
 Compilation failed
 8f16e86
+Thu 11 May 2023 04:52:54 PM UTC: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+heap.c: In function ‘heap_top’:
+heap.c:21:24: error: initialization of ‘void *’ from ‘int’ makes pointer from integer without a cast [-Werror=int-conversion]
+   21 |   void * maxPriority = pq->heapArray[0].priority;
+      |                        ^~
+cc1: all warnings being treated as errors
+Compilation failed
+c51e961
