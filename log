@@ -123,3 +123,18 @@ heap.c:21:24: error: initialization of ‘void *’ from ‘int’ makes pointer
 cc1: all warnings being treated as errors
 Compilation failed
 c51e961
+Thu 11 May 2023 04:59:51 PM UTC: 
+ heap.c | 7 +++++--
+ 1 file changed, 5 insertions(+), 2 deletions(-)
+In file included from test.c:4:
+heap.c: In function ‘heap_top’:
+heap.c:21:7: error: unused variable ‘maxPriority’ [-Werror=unused-variable]
+   21 |   int maxPriority = pq->heapArray[0].priority;
+      |       ^~~~~~~~~~~
+heap.c: In function ‘heap_push’:
+heap.c:33:1: error: expected expression before ‘}’ token
+   33 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+608e349

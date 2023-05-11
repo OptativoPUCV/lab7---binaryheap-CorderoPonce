@@ -18,14 +18,17 @@ typedef struct Heap{
 
 
 void* heap_top(Heap* pq){
-  void * maxPriority = pq->heapArray[0].priority;
+  int maxPriority = pq->heapArray[0].priority;
   
-    return maxPriority;
+    return NULL;
 }
 
 
 
 void heap_push(Heap* pq, void* data, int priority){
+  pq->heapArray[pq->size + 1].data = data;
+  pq->heapArray[pq->size + 1].priority = priority;
+  for (int i = 0 ; i < pq->capac ; i++)
 
 }
 
