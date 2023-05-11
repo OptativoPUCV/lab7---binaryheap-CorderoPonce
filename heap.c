@@ -64,12 +64,8 @@ void heap_pop(Heap* pq){
       pq->heapArray[max] = pq->heapArray[i];
       pq->heapArray[i] = temp;
       i = max;
-    } else {
-      break;
-    }
+    } else break;
   }
-  
-
 }
 
 Heap* createHeap(){
